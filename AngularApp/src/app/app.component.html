@@ -1,4 +1,4 @@
-<h1>First Angular App</h1>
+<!-- <h1>First Angular App</h1> -->
 <!-- <app-navbar></app-navbar>
 <app-header></app-header> -->
 <!-- <h2>{{title}}</h2>
@@ -30,6 +30,37 @@
   <!-- Event Binding -->
 
   <!-- <button (click)="buttonClick()">Click ME</button>
-  <button (mouseover)="buttonClick()">Click ME</button> -->
-  <input type= "text" (keyup)="enter()">
+  <button (mouseover)="buttonClick()">Click ME</button>
+  <input type= "text" (keyup)="keyEnter($event)">
   
+  <input type="text" (keyup.enter)="keyupFiltering()"> -->
+
+
+    <!-- Template Variable -->
+  <!-- <input type="text" (keyup.enter)="keyupFiltering(user)" #user id="userId"> -->
+
+  <!-- Two way Data Binding -->
+   <!-- <input type="text" [value]="userName" #username (keyup.enter)= "updateUserName(username)"> -->
+
+   <!-- <input type="text" [(ngModel)]="userName" >
+
+   <h1>{{userName}}</h1> -->
+
+   <h1>{{appPostTitle}} (App)</h1>
+   <!-- <app-posts-list [postListTitle] = "appPostTitle" [postIsLogin] = "appIsLogin"></app-posts-list> -->
+   <app-posts-list (MessageEvent)="receiveMessage($event)" ></app-posts-list>
+
+<p>{{ message }}</p>
+<p>{{messageFromChild}}</p>
+<app-card>
+  <h1>Dinusha</h1>
+  <p>Dimbulgamuwa</p>
+  <p>0763417990</p>
+
+</app-card>
+
+<app-card>
+<span header>userName</span>
+<h1 body>Dinusha MAdhuranga</h1>
+<button footer>View Profile</button>
+</app-card>
