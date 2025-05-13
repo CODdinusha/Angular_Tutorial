@@ -46,11 +46,11 @@
 
    <h1>{{userName}}</h1> -->
 
-   <h1>{{appPostTitle}} (App)</h1>
+   <!-- <h1>{{appPostTitle}} (App)</h1> -->
    <!-- <app-posts-list [postListTitle] = "appPostTitle" [postIsLogin] = "appIsLogin"></app-posts-list> -->
-   <app-posts-list (MessageEvent)="receiveMessage($event)" ></app-posts-list>
+   <!-- <app-posts-list (MessageEvent)="receiveMessage($event)" ></app-posts-list> -->
 
-<p>{{ message }}</p>
+<!-- <p>{{ message }}</p>
 <p>{{messageFromChild}}</p>
 <app-card>
   <h1>Dinusha</h1>
@@ -63,4 +63,8 @@
 <span header>userName</span>
 <h1 body>Dinusha MAdhuranga</h1>
 <button footer>View Profile</button>
-</app-card>
+</app-card> -->
+<!-- <app-posts-list></app-posts-list>
+<div *ngComponentOutlet="loadComponent()"></div> -->
+<button (click)="loadComponent()">Create a Component</button>
+<button (click)="removeComponent()">Remove the Component</button>
